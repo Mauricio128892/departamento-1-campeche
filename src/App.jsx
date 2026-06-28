@@ -17,7 +17,7 @@ const FadeInSection = ({ children, delay = 0 }) => {
           }
         });
       },
-      { threshold: 0.05 }
+      { threshold: 0.05 } // Detecta la sección casi de inmediato
     );
 
     const currentRef = domRef.current;
@@ -52,7 +52,13 @@ function App() {
     "/img/FOTO4.jpg",
     "/img/FOTO5.jpg",
     "/img/FOTO6.jpg",
-    "/img/FOTO7.jpg"
+    "/img/FOTO7.jpg",
+    "/img/FOTO8.jpg",
+    "/img/FOTO9.jpg",
+    "/img/FOTO10.jpg",
+    "/img/FOTO11.jpg",
+    "/img/FOTO12.jpg",
+    "/img/FOTO13.jpg"
   ];
 
   const [lightbox, setLightbox] = useState({ isOpen: false, index: 0 });
@@ -138,7 +144,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative">
           
           <h1 className="text-xl font-serif font-bold text-[#2D4350] whitespace-nowrap">
-            Departamento 3
+            Departamento 1
           </h1>
           
           {/* Menú de Escritorio (Oculto en celular) */}
@@ -209,19 +215,23 @@ function App() {
               Acerca del departamento
             </h3>
             <p className="text-stone-600 text-center mb-8 font-medium">
-              Concepto tipo Loft • Estilo Industrial
+            • Estilo Industrial
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-6 text-sm text-stone-700">
+
+              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Recamara con ropero</div>
+              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Baño con regadera</div>
+              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Área de sala comedor</div>
+              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Balcón chico</div>
+               
               <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Cocina equipada</div>
-              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Área de sala</div>
-              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Espacio con cama matrimonial</div>
+              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Detector de monóxido de carbono</div>
+              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Refrigerador</div>
               <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Aire acondicionado</div>
               <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Ventiladores de techo</div>
-              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Baño con regadera</div>
               <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Agua caliente</div>
-              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Detector de monóxido de carbono</div>
-              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Ropero y mueble con varios cajones</div>
-              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Burro chico para planchar y plancha</div>
+              <div className="flex items-center gap-3"><span className="text-[#4A6B7C] text-lg">✦</span> Burro para planchar y plancha</div>
+
             </div>
           </div>
         </FadeInSection>
@@ -284,9 +294,14 @@ function App() {
                 alt="Mapa de ubicación" 
                 className="w-full h-52 object-cover rounded-3xl shadow-inner border border-stone-200/40"
               />
-              <button className="w-full bg-[#4A6B7C] hover:bg-[#2D4350] text-[#F4F1EA] py-3.5 px-6 rounded-full transition-colors shadow-md font-medium text-center">
+              <a 
+                href="https://maps.app.goo.gl/ueMv8byoy1eFAr338" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block w-full bg-[#4A6B7C] hover:bg-[#2D4350] text-[#F4F1EA] py-3.5 px-6 rounded-full transition-colors shadow-md font-medium text-center"
+              >
                 Guíame hasta aquí (Google Maps)
-              </button>
+              </a>
             </div>
           </FadeInSection>
         </div>
@@ -310,15 +325,15 @@ function App() {
               <ul className="space-y-5 text-stone-700 text-sm md:text-base flex-grow">
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#4A6B7C]/10 text-[#4A6B7C] flex items-center justify-center font-bold text-xs mt-0.5">1</span>
-                  <span><strong>Puerta principal:</strong> Ingresa el código <span className="font-bold text-[#4A6B7C]">101003#</span> en el teclado.</span>
+                  <span><strong>Puerta principal:</strong> Ingresa el código <span className="font-bold text-[#4A6B7C]">que te daran personalmente</span> y teclealo en la cerradura electronica.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#4A6B7C]/10 text-[#4A6B7C] flex items-center justify-center font-bold text-xs mt-0.5">2</span>
-                  <span><strong>Tu departamento:</strong> Sube las escaleras, el Depa 3 está al final del pasillo.</span>
+                  <span><strong>Tu departamento:</strong> Sube las escaleras, el Departamento 1 se encuentra en la primera puerta a la izquierda.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#4A6B7C]/10 text-[#4A6B7C] flex items-center justify-center font-bold text-xs mt-0.5">3</span>
-                  <span><strong>Tus llaves:</strong> Abre la caja de seguridad junto a la puerta usando el código <span className="font-bold text-[#4A6B7C]">1013</span>.</span>
+                  <span><strong>Tus llaves:</strong> Abre la caja de seguridad junto a la puerta usando el código <span className="font-bold text-[#4A6B7C]">que también se te proporcionará</span>.</span>
                 </li>
               </ul>
             </div>
@@ -480,7 +495,7 @@ function App() {
         </div>
       </section>
 
-{/* SECCIÓN 9: RECOMENDACIONES DE LUGARES */}
+      {/* SECCIÓN 9: RECOMENDACIONES DE LUGARES */}
       <section id="recomendaciones" className="py-16 px-6 bg-[#A8BBC9]">
         <div className="max-w-5xl mx-auto space-y-20">
           
@@ -495,11 +510,11 @@ function App() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
-                  { nombre: "Bodega Aurrera", horario: "8:00 am - 9:30 pm", desc: "La opción ideal para realizar compras grandes de despensa general, abarrotes, frutas, verduras, panadería fresca y artículos de higiene a precios muy accesibles.", foto: "/img/AURRERA.jpg" },
-                  { nombre: "OXXO", horario: "24 Hrs.", desc: "Tienda de conveniencia abierta toda la noche. Perfecta para emergencias, comprar hielo, botanas, refrescos, café caliente, cargadores rápidos o realizar retiros de efectivo.", foto: "/img/OXXO.jpg" },
-                  { nombre: "Soriana", horario: "8:00 am - 10:00 pm", desc: "Supermercado amplio y cómodo. Cuenta con un excelente surtido de alimentos, carnes frescas, una amplia sección de vinos y licores, farmacia y cuidado personal.", foto: "/img/SORIANA.jpg" },
-                  { nombre: "Mercado Campeche", horario: "6:00 am - 8:00 pm", desc: "Para vivir la experiencia local. Ideal para comprar mariscos y pescados frescos del día, frutas tropicales de temporada, verduras de la región y artesanías auténticas.", foto: "/img/MERCADO.jpg" },
-                  { nombre: "Carnes Santa Fé", horario: "10:00 am - 8:00 pm", desc: "Boutique especializada en cortes de carne premium (res, cerdo y pollo) de excelente calidad para preparar una asada. Pregunta por su servicio de entrega a domicilio.", foto: "/img/CARNESSANTAFE.jpg" },
+                  { nombre: "Bodega Aurrera", horario: "8:00 am - 9:30 pm", desc: "La opción ideal para realizar compras grandes de despensa general, abarrotes, frutas, verduras, panadería fresca y artículos de higiene a precios muy accesibles.", foto: "/img/AURRERA.jpg", link: "https://maps.app.goo.gl/aX4cbdbYu6HPeAWn7" },
+                  { nombre: "OXXO", horario: "24 Hrs.", desc: "Tienda de conveniencia abierta toda la noche. Perfecta para emergencias, comprar hielo, botanas, refrescos, café caliente, cargadores rápidos o realizar retiros de efectivo.", foto: "/img/OXXO.jpg", link: "https://maps.app.goo.gl/6Pz1s5ksD7PtqS9u7" },
+                  { nombre: "Soriana", horario: "8:00 am - 10:00 pm", desc: "Supermercado amplio y cómodo. Cuenta con un excelente surtido de alimentos, carnes frescas, una amplia sección de vinos y licores, farmacia y cuidado personal.", foto: "/img/SORIANA.jpg", link: "https://maps.app.goo.gl/hTuMXxEAoA6Jcg4E7" },
+                  { nombre: "Mercado Campeche", horario: "6:00 am - 8:00 pm", desc: "Para vivir la experiencia local. Ideal para comprar mariscos y pescados frescos del día, frutas tropicales de temporada, verduras de la región y artesanías auténticas.", foto: "/img/MERCADO.jpg", link: "https://maps.app.goo.gl/e4TEShQqTKjfA2ev5" },
+                  { nombre: "Carnes Santa Fé", horario: "10:00 am - 8:00 pm", desc: "Boutique especializada en cortes de carne premium (res, cerdo y pollo) de excelente calidad para preparar una asada. Pregunta por su servicio de entrega a domicilio.", foto: "/img/CARNESSANTAFE.jpg", link: "https://maps.app.goo.gl/cXc89ofbpdB9SwrP9" },
                 ].map((lugar, i) => (
                   <div key={i} className="bg-[#F4F1EA] rounded-3xl overflow-hidden shadow-sm border border-stone-200/30 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <div className="h-32 w-full flex items-center justify-center border-b border-stone-300/30 bg-[#E0D8CC]/60">
@@ -509,9 +524,9 @@ function App() {
                       <h5 className="font-serif text-xl font-bold text-[#2D4350] mb-1">{lugar.nombre}</h5>
                       <p className="text-xs font-bold text-[#4A6B7C] mb-4 tracking-wider">{lugar.horario}</p>
                       <p className="text-sm text-stone-600 mb-6 flex-grow leading-relaxed">{lugar.desc}</p>
-                      <button className="mt-auto bg-[#4A6B7C] text-[#F4F1EA] py-2.5 rounded-full text-xs font-bold hover:bg-[#2D4350] transition-colors w-full shadow-sm">
+                      <a href={lugar.link} target="_blank" rel="noopener noreferrer" className="block text-center mt-auto bg-[#4A6B7C] text-[#F4F1EA] py-2.5 rounded-full text-xs font-bold hover:bg-[#2D4350] transition-colors w-full shadow-sm">
                         Guíame aquí
-                      </button>
+                      </a>
                     </div>
                   </div>
                 ))}
@@ -530,14 +545,14 @@ function App() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
-                  { nombre: "La Parrilla (Cocina Económica)", horario: "1:00 pm - 5:00 pm", desc: "La mejor opción para el almuerzo. Ofrecen comidas, cocina corrida y deliciosos guisos tradicionales campechanos.", foto: "/img/PARRILLA.jpg" },
-                  { nombre: "La Palapa del Tío Fito", horario: "8:00 am - 8:00 pm", desc: "Genuina comida tradicional costera. Especialistas en mariscos frescos, cocteles y gastronomía campechana en un ambiente relajado junto al mar.", foto: "/img/TIOFITO.jpg" },
-                  { nombre: "Arlés", horario: "L-V 2pm-9pm | Sáb 8am-4pm", desc: "Excelente opción para comer o cenar. Restaurante con enfoque saludable, platillos 100% veganos, orgánicos, café y postres.", foto: "/img/ARLES.jpg" },
-                  { nombre: "La Parroquia del Centro", horario: "24 Hrs.", desc: "Ubicada en el Centro de la ciudad. Un clásico imperdible para disfrutar de auténtica comida tradicional campechana, pan y café.", foto: "/img/PARROQUIA.jpg" },
-                  { nombre: "Carola Brunch", horario: "8:00 am - 2:00 pm", desc: "Un rincón precioso ideal para iniciar el día. Destaca por su excelente variedad de opciones para un desayuno completo, chilaquiles y café.", foto: "/img/CAROLA.jpg" },
-                  { nombre: "La 59", horario: "24 Hrs.", desc: "Ubicado en la calle más icónica del centro. Es un sitio muy popular y con gran ambiente tanto para el desayuno y almuerzo, como para cenar de noche.", foto: "/img/59.jpg" },
-                  { nombre: "Parrillita Bola de Queso", horario: "10:00 am - 5:00 pm", desc: "Deliciosas especialidades regionales con el icónico queso de bola. Ideal para un almuerzo rápido, pedir desde el automóvil o solicitar entrega a domicilio.", foto: "/img/PARRILLITA.jpg" },
-                  { nombre: "La Parrilla (Taquería)", horario: "Lun a Sáb: 8:00 pm - 1:00 am", desc: "El mismo excelente sazón pero para cenar. Ideal para antojos nocturnos, con un menú variado y servicio rápido.", foto: "/img/PARRILLA.jpg" },
+                  { nombre: "La Parrilla (Cocina Económica)", horario: "1:00 pm - 5:00 pm", desc: "La mejor opción para el almuerzo. Ofrecen comidas, cocina corrida y deliciosos guisos tradicionales campechanos.", foto: "/img/PARRILLA.jpg", link: "https://maps.app.goo.gl/iw5yBHm9SnLi72u86" },
+                  { nombre: "La Palapa del Tío Fito", horario: "8:00 am - 8:00 pm", desc: "Genuina comida tradicional costera. Especialistas en mariscos frescos, cocteles y gastronomía campechana en un ambiente relajado junto al mar.", foto: "/img/TIOFITO.jpg", link: "https://maps.app.goo.gl/Uf8y8Pci8NrZoFeV9" },
+                  { nombre: "Arlés", horario: "L-V 2pm-9pm | Sáb 8am-4pm", desc: "Excelente opción para comer o cenar. Restaurante con enfoque saludable, platillos 100% veganos, orgánicos, café y postres.", foto: "/img/ARLES.jpg", link: "https://maps.app.goo.gl/RZJ6XtWEkqKBgD4X7" },
+                  { nombre: "La Parroquia del Centro", horario: "24 Hrs.", desc: "Ubicada en el Centro de la ciudad. Un clásico imperdible para disfrutar de auténtica comida tradicional campechana, pan y café.", foto: "/img/PARROQUIA.jpg", link: "https://maps.app.goo.gl/YwcnrvKCJ7PKumoQ7" },
+                  { nombre: "Carola Brunch", horario: "8:00 am - 2:00 pm", desc: "Un rincón precioso ideal para iniciar el día. Destaca por su excelente variedad de opciones para un desayuno completo, chilaquiles y café.", foto: "/img/CAROLA.jpg", link: "https://maps.app.goo.gl/aWUSpLQojyrjULkx8" },
+                  { nombre: "La 59", horario: "24 Hrs.", desc: "Ubicado en la calle más icónica del centro. Es un sitio muy popular y con gran ambiente tanto para el desayuno y almuerzo, como para cenar de noche.", foto: "/img/59.jpg", link: "https://maps.app.goo.gl/sx8ZJTe6XqSsyVZW9" },
+                  { nombre: "Parrillita Bola de Queso", horario: "10:00 am - 5:00 pm", desc: "Deliciosas especialidades regionales con el icónico queso de bola. Ideal para un almuerzo rápido, pedir desde el automóvil o solicitar entrega a domicilio.", foto: "/img/PARRILLITA.jpg", link: "https://maps.app.goo.gl/DVZimNeeMXgVv8Zj7" },
+                  { nombre: "La Parrilla (Taquería)", horario: "Lun a Sáb: 8:00 pm - 1:00 am", desc: "El mismo excelente sazón pero para cenar. Ideal para antojos nocturnos, con un menú variado y servicio rápido.", foto: "/img/PARRILLA.jpg", link: "https://maps.app.goo.gl/iw5yBHm9SnLi72u86" },
                 ].map((lugar, i) => (
                   <div key={i} className="bg-[#F4F1EA] rounded-3xl overflow-hidden shadow-sm border border-stone-200/30 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <div className={`h-32 w-full flex items-center justify-center border-b border-stone-300/30 ${lugar.foto.includes('.svg') ? 'bg-white' : 'bg-[#E0D8CC]/60'}`}>
@@ -547,9 +562,9 @@ function App() {
                       <h5 className="font-serif text-xl font-bold text-[#2D4350] mb-1">{lugar.nombre}</h5>
                       <p className="text-xs font-bold text-[#4A6B7C] mb-4 tracking-wider">{lugar.horario}</p>
                       <p className="text-sm text-stone-600 mb-6 flex-grow leading-relaxed">{lugar.desc}</p>
-                      <button className="mt-auto bg-[#4A6B7C] text-[#F4F1EA] py-2.5 rounded-full text-xs font-bold hover:bg-[#2D4350] transition-colors w-full shadow-sm">
+                      <a href={lugar.link} target="_blank" rel="noopener noreferrer" className="block text-center mt-auto bg-[#4A6B7C] text-[#F4F1EA] py-2.5 rounded-full text-xs font-bold hover:bg-[#2D4350] transition-colors w-full shadow-sm">
                         Guíame aquí
-                      </button>
+                      </a>
                     </div>
                   </div>
                 ))}
@@ -577,7 +592,7 @@ function App() {
                   desc: "Servicio de lavado y secado cercano para tu mayor comodidad durante tu estancia.", 
                   foto: "/img/LAVANDERIA.jpg",
                   opciones: [
-                    { nombre: "Lavandería Local", link: "https://www.google.com/maps/search/lavanderia+cerca+de+mi+Campeche" } 
+                    { nombre: "Lavandería Local", link: "https://maps.app.goo.gl/kEefPNHqKVdhyZzW6" } 
                   ]
                 },
                 { 
@@ -585,9 +600,9 @@ function App() {
                   desc: "Mantén tu rutina de ejercicios sin interrupciones en los gimnasios locales a corta distancia.", 
                   foto: "/img/GYM.jpg",
                   opciones: [
-                    { nombre: "Gym 1 (Más cercano)", link: "https://www.google.com/maps/search/gimnasio+cerca+de+mi+Campeche" },
-                    { nombre: "Gym 2", link: "https://www.google.com/maps/search/gimnasio+Campeche" },
-                    { nombre: "Gym 3", link: "https://www.google.com/maps/search/gym+Campeche" }
+                    { nombre: "Gym 1", link: "https://maps.app.goo.gl/zgt5Vm4oYPLcJvfp7" },
+                    { nombre: "Gym 2", link: "https://maps.app.goo.gl/9MEZLWPr4N2rS1x69" },
+                    { nombre: "Gym 3", link: "https://maps.app.goo.gl/3Ao9oosMbmuuLRCbA" }
                   ]
                 },
                 { 
@@ -595,8 +610,8 @@ function App() {
                   desc: "Atención médica rápida, segura y de primera calidad exclusivamente en clínicas y hospitales privados.", 
                   foto: "/img/HOSPITAL.jpg",
                   opciones: [
-                    { nombre: "Hospital Privado 1", link: "https://www.google.com/maps/search/hospital+privado+Campeche" },
-                    { nombre: "Clínica Privada 2", link: "https://www.google.com/maps/search/clinica+privada+Campeche" }
+                    { nombre: "Hospital Privado ", link: "https://maps.app.goo.gl/X2678FKpEdfm1UwC7" },
+                    { nombre: "Clínica Privada ", link: "https://maps.app.goo.gl/2AjK2Rv9w3LMh2AX6" }
                   ]
                 },
                 { 
@@ -604,9 +619,9 @@ function App() {
                   desc: "Sucursales cercanas para surtir recetas médicas, comprar cuidado personal o artículos de primera necesidad.", 
                   foto: "/img/FARMACIAS.jpg",
                   opciones: [
-                    { nombre: "Farmacias Bazar", link: "https://www.google.com/maps/search/Farmacia+Bazar+Campeche" },
-                    { nombre: "Farmacia Yza", link: "https://www.google.com/maps/search/Farmacia+Yza+Campeche" },
-                    { nombre: "Farmacia Guadalajara", link: "https://www.google.com/maps/search/Farmacia+Guadalajara+Campeche" }
+                    { nombre: "Farmacias Bazar", link: "https://maps.app.goo.gl/gGU3vbCf6joahkpU8" },
+                    { nombre: "Farmacia Yza", link: "https://maps.app.goo.gl/PLGCAPKQHovVVNvm7" },
+                    { nombre: "Farmacia Guadalajara", link: "https://maps.app.goo.gl/zzyfYWZwukkA7XQEA" }
                   ]
                 },
                 { 
@@ -614,9 +629,9 @@ function App() {
                   desc: "Estaciones de servicio cercanas y accesibles para recargar combustible de forma rápida.", 
                   foto: "/img/GASOLINERA.jpg",
                   opciones: [
-                    { nombre: "Gasolinera 1 (Más cercana)", link: "https://www.google.com/maps/search/gasolinera+cerca+de+mi+Campeche" },
-                    { nombre: "Gasolinera 2", link: "https://www.google.com/maps/search/estacion+de+servicio+Campeche" },
-                    { nombre: "Gasolinera 3", link: "https://www.google.com/maps/search/pemex+Campeche" }
+                    { nombre: "Gasolinera 1 (Más cercana)", link: "https://maps.app.goo.gl/wnEQ1ufWrinKAFuc9" },
+                    { nombre: "Gasolinera 2", link: "https://maps.app.goo.gl/JUXVFNNsw29HjGaz6" },
+                    { nombre: "Gasolinera 3", link: "https://maps.app.goo.gl/FEdHSqjvakyPWBbJ7" }
                   ]
                 },
               ].map((servicio, i) => (
@@ -658,9 +673,9 @@ function App() {
           </FadeInSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { nombre: "Plaza Galerias", horario: "11:00 am - 9:00 pm", desc: "El centro comercial más grande y moderno de la ciudad.", foto: "/img/GALERIAS.jpg" },
-              { nombre: "Centro de Campeche", horario: "24 Hrs.", desc: "Patrimonio de la Humanidad. Camina por sus calles adoquinadas y maravíllate con sus coloridas casas coloniales.", foto: "/img/CENTRO.jpg" },
-              { nombre: "Malecón de Campeche", horario: "24 Hrs.", desc: "El lugar perfecto para relajarte frente al mar. Es ideal para caminar, correr o ver los atardeceres.", foto: "/img/MALECON.jpg" }
+              { nombre: "Plaza Galerias", horario: "11:00 am - 9:00 pm", desc: "El centro comercial más grande y moderno de la ciudad.", foto: "/img/GALERIAS.jpg", link: "https://maps.app.goo.gl/jLTdqVM3mVhWfqbh9" },
+              { nombre: "Centro de Campeche", horario: "24 Hrs.", desc: "Patrimonio de la Humanidad. Camina por sus calles adoquinadas y maravíllate con sus coloridas casas coloniales.", foto: "/img/CENTRO.jpg", link: "https://maps.app.goo.gl/GBMhaUxHHvoPEB6P9" },
+              { nombre: "Malecón de Campeche", horario: "24 Hrs.", desc: "El lugar perfecto para relajarte frente al mar. Es ideal para caminar, correr o ver los atardeceres.", foto: "/img/MALECON.jpg", link: "https://maps.app.goo.gl/BbFNtTsMCLK3TXGx5" }
             ].map((lugar, i) => (
               <FadeInSection delay={i * 150} key={i}>
                 <div className="bg-[#F4F1EA] rounded-3xl overflow-hidden shadow-sm border border-stone-200/30 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -669,9 +684,9 @@ function App() {
                     <h5 className="font-serif text-xl font-bold text-[#2D4350] mb-1">{lugar.nombre}</h5>
                     <p className="text-xs font-bold text-[#4A6B7C] mb-3">{lugar.horario}</p>
                     <p className="text-sm text-stone-600 mb-5 flex-grow leading-relaxed">{lugar.desc}</p>
-                    <button className="bg-[#4A6B7C] text-[#F4F1EA] px-4 py-2.5 rounded-full text-xs font-bold hover:bg-[#2D4350] transition-colors w-full shadow-sm">
+                    <a href={lugar.link} target="_blank" rel="noopener noreferrer" className="block text-center mt-auto bg-[#4A6B7C] text-[#F4F1EA] px-4 py-2.5 rounded-full text-xs font-bold hover:bg-[#2D4350] transition-colors w-full shadow-sm">
                       Guíame aquí
-                    </button>
+                    </a>
                   </div>
                 </div>
               </FadeInSection>
